@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
 
 console.log(process.env);
-const baseURL = process.env.VERCEL_URL || 'http://127.0.0.1:3000';
+const baseURL = process.env.VERCEL_URL;
 
 const axiosInstance = axios.create({
     baseURL,
