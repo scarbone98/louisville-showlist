@@ -4,13 +4,8 @@ import axios from "@/lib/axios";
 export const dynamic = 'force-dynamic';
 
 export default async function Home() {
-  let baseURL = process.env.VERCEL_URL;
 
-  if (process.env.NODE_ENV === 'production') {
-    baseURL = `https://${process.env.VERCEL_URL}`;
-  }
-
-  const data = await fetch(baseURL + '/api/home').then((res) => res.json());
+  const data = await fetch(process.env.URL + '/api/home').then((res) => res.json());
 
   return (
     <div className="flex justify-center">
